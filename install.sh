@@ -6,7 +6,7 @@ echo "-----------------------"
 echo ""
 
 apt update
-apt upgrade
+apt upgrade -y
 apt install -y curl gnupg2 ca-certificates lsb-release software-properties-common dirmngr apt-transport-https openssl
 
 OPTIONS=h:t:
