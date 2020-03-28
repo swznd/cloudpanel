@@ -15,7 +15,7 @@ SQL_QUERY="${SQL_QUERY} DELETE FROM mysql.user WHERE User='';"
 # Remove Remote Root
 SQL_QUERY="${SQL_QUERY} DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');"
 # Kill off the demo database
-SQL_QUERY="${SQL_QUERY} DROP DATABASE DATABASE IF EXISTS test;"
+SQL_QUERY="${SQL_QUERY} DROP DATABASE IF EXISTS test;"
 SQL_QUERY="${SQL_QUERY} DELETE FROM mysql.db WHERE Db='test' OR Db='test\\_%';"
 # Make our changes take effect
 SQL_QUERY="${SQL_QUERY} FLUSH PRIVILEGES;"
