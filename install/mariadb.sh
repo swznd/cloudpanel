@@ -5,7 +5,7 @@ echo "Installing MariaDB ${DBVERSION}"
 echo "-----------------------"
 sleep 1
 `curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-${DBVERSION}"`
-apt install -y mariadb-server mariadb-client
+apt-get install -y mariadb-server mariadb-client
 
 echo "Securing MariaDB Instalation ..."
 # Make sure that NOBODY can access the server without a password

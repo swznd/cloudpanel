@@ -5,9 +5,9 @@ echo "Please Make Sure this box is running on clean Debian"
 echo "-----------------------"
 echo ""
 
-apt update
-apt upgrade -y
-apt install -y curl gnupg2 ca-certificates lsb-release software-properties-common dirmngr apt-transport-https openssl
+apt-get update
+apt-get upgrade -y
+apt-get install -y curl gnupg2 ca-certificates lsb-release software-properties-common dirmngr apt-transport-https openssl
 
 OPTIONS=h:t:
 LONGOPTS=hostname:,timezone:php:,db:,dbversion:,dbpass:
