@@ -4,7 +4,7 @@ echo "-----------------------"
 echo "Installing MariaDB ${DBVERSION}"
 echo "-----------------------"
 sleep 1
-`curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-${DBVERSION}"`
+`curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | bash -s -- --mariadb-server-version="mariadb-${DBVERSION}"`
 apt-get install -y mariadb-server mariadb-client
 
 echo "Securing MariaDB Instalation ..."
@@ -24,3 +24,4 @@ if mysql -uroot -e "${SQL_QUERY}"; then
     echo "Securing MariaDB installation Success"
 else
     echo "Error when securing MariaDB Installation"
+fi
