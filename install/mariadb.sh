@@ -8,8 +8,9 @@ sleep 1
 apt-get install -y mariadb-server mariadb-client
 
 echo "Securing MariaDB Instalation ..."
+sleep 1
 # Make sure that NOBODY can access the server without a password
-SQL_QUERY="ALTER USER 'root'@'localhost' IDENTIFIED BY '${DB_PASS}';"
+SQL_QUERY="ALTER USER 'root'@'localhost' IDENTIFIED BY '${DBPASS}';"
 # Reomove anonymous users
 SQL_QUERY="${SQL_QUERY} DELETE FROM mysql.user WHERE User='';"
 # Remove Remote Root
