@@ -5,8 +5,8 @@ echo "Please Make Sure this box is running on clean Debian"
 echo "-----------------------"
 echo ""
 
-# apt update
-# apt install -y curl gnupg2 ca-certificates lsb-release software-properties-common dirmngr apt-transport-https openssl getopt
+apt update
+apt install -y curl gnupg2 ca-certificates lsb-release software-properties-common dirmngr apt-transport-https openssl getopt
 
 OPTIONS=h:t:
 LONGOPTS=hostname:,timezone:php:,db:,dbversion:,dbpass:
@@ -53,14 +53,9 @@ while true; do
     esac
 done
 
-setHostname
-setTimezone
-
 export PHPVERSIONS
 export DBVERSION
 export DBPASS
-
-installer
 
 setHostname() {
     if [ -z "$HOSTNAME" ]; then
@@ -90,3 +85,7 @@ installer() {
     
     sh install/php.sh 
 }
+
+setHostname
+setTimezone
+installer
