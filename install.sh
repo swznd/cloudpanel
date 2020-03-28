@@ -86,7 +86,7 @@ installer() {
     sh "$DIRNAME/install/nginx.sh"
     sh "$DIRNAME/install/letsencrypt.sh"
 
-    if [[ "$DB" == "mariadb" ]]; then
+    if [ "$DB" = "mariadb" ]; then
         sh "$DIRNAME/install/mariadb.sh"
     fi
     
