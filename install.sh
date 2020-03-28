@@ -23,11 +23,11 @@ TIMEZONE=UTC
 while true; do
     echo "$1"
     case "$1" in
-        --h|--hostname)
+        -h|--hostname)
             HOSTNAME="$2"
             shift 2
             ;;
-        --t|--timezone)
+        -t|--timezone)
             TIMEZONE="$2"
             shift 2
             ;;
@@ -50,6 +50,10 @@ while true; do
         --)
             shift
             break
+            ;;
+        *)
+            echo "Wrong arguments"
+            exit 3
             ;;
     esac
 done

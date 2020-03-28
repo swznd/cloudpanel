@@ -11,5 +11,5 @@ IFS=','
 for phpver in $PHPVERSIONS; do
     echo "Installing PHP $phpver"
     sleep 1
-    `apt-get install -y php$phpver-cli php$phpver-fpm php$phpver-mysql php$phpver-zip php$phpver-iconv php$phpver-gd php$phpver-fileinfo php$phpver-exif php$phpver-mbstring php$phpver-gettex`
+    apt-get install -y php$phpver-cli php$phpver-fpm php$phpver-mysql php$phpver-zip php$phpver-iconv php$phpver-gd php$phpver-fileinfo php$phpver-exif php$phpver-mbstring php$phpver-gettex
 done
