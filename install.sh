@@ -6,7 +6,8 @@ echo "-----------------------"
 echo ""
 
 apt update
-apt install -y curl gnupg2 ca-certificates lsb-release software-properties-common dirmngr apt-transport-https openssl getopt
+apt upgrade
+apt install -y curl gnupg2 ca-certificates lsb-release software-properties-common dirmngr apt-transport-https openssl
 
 OPTIONS=h:t:
 LONGOPTS=hostname:,timezone:php:,db:,dbversion:,dbpass:
