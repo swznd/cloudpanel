@@ -65,7 +65,7 @@ export DBPASS
 setHostname() {
     if [ -z "$HOSTNAME" ]; then
         read -p "Hostname: " HOSTNAME
-        checkHostname
+        setHostname
     else
         echo "Setting Hostname to $HOSTNAME..."
         sleep 1
