@@ -77,14 +77,16 @@ setTimezone() {
 }
 
 installer() {
-    sh install/nginx.sh
-    sh install/letsencrypt.sh
+    DIRNAME=$(dirname "$0")
 
-    if [ "$DB" == "mariadb"]; then
-        sh install/mariadb.sh
+    sh "$DIRNAME/install/nginx.sh"
+    sh "$DIRNAME/install/letsencrypt.sh"
+
+    if [ "$DB" == "mariadb" ]; then
+        sh "$DIRNAME/install/mariadb.sh"
     fi
     
-    sh install/php.sh 
+    sh "$DIRNAME/install/php.sh"
 }
 
 setHostname
