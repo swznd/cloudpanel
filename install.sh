@@ -91,6 +91,14 @@ installer() {
     fi
     
     sh "$DIRNAME/install/php.sh"
+
+    echo ""
+    echo ""
+    echo "Installed Successfully"
+    echo ""
+    echo "Here is your system information:"
+    echo "Hostname            : $HOSTNAME"
+    echo "MySQL Root Password : $DB_PASS"
 }
 
 setHostname
